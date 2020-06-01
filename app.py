@@ -2,8 +2,8 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-from dash.dependencies import State, Input, Output
-import xlwings as xw
+#from dash.dependencies import State, Input, Output
+#import xlwings as xw
 
 
 ########### Define your variables
@@ -63,16 +63,6 @@ app.layout = html.Div(children=[
     ]
 )
 
-@app.callback(
-    Output(component_id='output_1', component_property='children'),
-    [Input('update-button', 'n_clicks')],
-)
-def update_xl_values_f(n_clicks):
-    if(n_clicks > 0): 
-
-        return(n_clicks)
-    else:
-        return()
 
 
 if __name__ == '__main__':
