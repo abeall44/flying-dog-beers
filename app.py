@@ -34,11 +34,8 @@ app.layout = html.Div(children=[
     [Input('update-button', 'n_clicks')],
 )
 def update_xl_values_f(n_clicks):
-    if(n_clicks > 0): 
-        wb = xw.books.active
-        t = wb.sheets['Sheet1'].range('a1').value
-        wb.sheets['Sheet1'].range('a2').value = t + 1
-        return(t)
+    if(n_clicks > 0):   
+        return(n_clicks)
     else:
         return()
  
