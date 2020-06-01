@@ -60,10 +60,20 @@ app.layout = html.Div(children=[
     html.Br(),
     html.A('Data Source', href=sourceurl),
     html.Button(id='update-button', n_clicks=0, children='update'),
+    html.Div(id = 'output_1')
     ]
 )
 
+@app.callback(
+    Output(component_id='output_1', component_property='children'),
+    [Input('update-button', 'n_clicks')],
+)
+def update_xl_values_f(n_clicks):
+    if(n_clicks > 0): 
 
+        return(n_clicks)
+    else:
+        return()
 
 if __name__ == '__main__':
     app.run_server()
